@@ -42,5 +42,5 @@ jobs:
         cmake --build build --config Release
         
     - name: Run Program
-      run: ./bin/make/Release/sobel.exe      
+      run: ./build/Release/sobel.exe      
       
