@@ -21,7 +21,7 @@ jobs:
       run: ./CMakeGCC.sh
 
     - name: Compile
-      run: make ./bin/make
+      run: cd ./bin/make && make && cd ../..
 
     - name: Run Program
       run: ./bin/make/Release/sobel
