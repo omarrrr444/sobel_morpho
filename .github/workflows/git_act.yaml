@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build_linux:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,3 +26,21 @@ jobs:
     - name: Run Program
       run: ./bin/make/Release/sobel
 
+  build_windows:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Create cmake
+      run: ./CMakeVS2013.bat
+
+    - name: Build
+      run: |
+        cmake -B build
+        cmake --build build --config Release
+        
+    - name: Run Program
+      run: ./bin/make/Release/sobel.exe      
+      
