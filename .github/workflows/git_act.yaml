@@ -42,5 +42,5 @@ jobs:
         cmake --build build --config Release
         
     - name: Run Program
-      run: D:\a\sobel_morpho\sobel_morpho\build\Release\sobel.exe  
+      run: Start-Process -FilePath "D:\a\sobel_morpho\sobel_morpho\build\Release\sobel.exe"
       
